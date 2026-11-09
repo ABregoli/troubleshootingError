@@ -1,0 +1,244 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0402
+header_name {UiTroubleshootingEngine.h}
+code_name {UiTroubleshootingEngine.cpp}
+decl {\#include <FL/Fl_Hold_Browser.H>} {public global
+}
+
+Function {make_window()} {open C
+} {
+  Fl_Window operatorWindow {
+    label {Troubleshooting Assistant} open
+    xywh {680 153 1018 763} type Double align 80 visible
+  } {
+    Fl_Group WinAssistenzaMacchina {
+      comment {Asistenza allarme macchina} open
+      xywh {0 36 1018 726} hide
+    } {
+      Fl_Box titleBox {
+        label {Assistente Diagnostica Macchina}
+        xywh {20 46 400 30} labelsize 25 align 20
+      }
+      Fl_Group searchGroup {
+        label {Ricerca Allarme} open
+        xywh {20 86 950 94} box GTK_UP_BOX labelsize 15 align 17
+      } {
+        Fl_Input alarmCodeInput {
+          label Codice
+          xywh {120 119 250 30} box GTK_DOWN_BOX
+        }
+        Fl_Button searchButton {
+          label Cerca
+          callback OnSerachBtton
+          xywh {390 119 100 30}
+        }
+        Fl_Browser alarmListBrowser {
+          xywh {680 96 280 80}
+          class Fl_Hold_Browser
+        }
+      }
+      Fl_Group alarmGroup {
+        label {Dettaglio Allarme} open
+        xywh {20 186 950 120} box GTK_UP_BOX labelsize 15 align 17
+      } {
+        Fl_Output alarmTitleOutput {
+          label Titolo
+          xywh {120 242 500 30} box GTK_DOWN_BOX
+        }
+      }
+      Fl_Group procedureGroup {
+        label Procedura open
+        xywh {20 326 950 250} box GTK_UP_BOX labelsize 15 align 17
+      } {
+        Fl_Output stepNumberOutput {
+          label Step
+          xywh {120 388 150 30} box GTK_DOWN_BOX
+        }
+        Fl_Output stepTitleOutput {
+          label Titolo
+          xywh {120 428 600 30} box GTK_DOWN_BOX
+        }
+      }
+      Fl_Group actionGroup {
+        label Azioni open
+        xywh {20 596 950 94} box GTK_UP_BOX labelsize 15 align 17
+      } {
+        Fl_Button previousButton {
+          label Indietro
+          callback OnAzionePrecedente
+          xywh {120 626 120 40} box GTK_UP_BOX down_box GTK_DOWN_BOX
+        }
+        Fl_Button nextButton {
+          label Avanti
+          callback OnAzioneSuccessiva
+          xywh {260 626 120 40} box GTK_UP_BOX down_box GTK_DOWN_BOX
+        }
+        Fl_Button solvedButton {
+          label Risolto
+          callback OnAzioneRisolto
+          xywh {580 626 120 40} box GTK_UP_BOX down_box GTK_DOWN_BOX color 63
+        }
+        Fl_Button notSolvedButton {
+          label {Non Risolto}
+          callback OnAzioneNonRisolto
+          xywh {720 626 150 40} box GTK_UP_BOX down_box GTK_DOWN_BOX color 89
+        }
+      }
+    }
+    Fl_Group WinFeedDatabase {
+      comment {Inserimento nuovo elemento a dataset} open
+      xywh {0 36 1018 726}
+    } {
+      Fl_Box CompilazioneDatasetTitle {
+        label {Compilazione dataset}
+        xywh {20 46 400 30} labelsize 25 align 20
+      }
+      Fl_Group InsertAlarm {
+        label {Dichiarazione allarme} open
+        xywh {20 86 950 228} box GTK_UP_BOX labelsize 15 align 17
+      } {
+        Fl_Input InsertAlarmCode {
+          label {Numero allarme:}
+          xywh {108 128 250 30} box GTK_DOWN_BOX align 5
+        }
+        Fl_Input InsertAlarmDescription {
+          label {Descrizione:}
+          xywh {108 176 770 30} box GTK_DOWN_BOX align 5
+        }
+        Fl_Input InsertAlarmNote {
+          label {Note:}
+          xywh {108 225 770 30} box GTK_DOWN_BOX align 5
+        }
+        Fl_Button InsertAlarmDatabase {
+          label Aggiungi
+          callback OnAggiungiAllarme
+          xywh {844 267 100 30} box GTK_UP_BOX down_box GTK_DOWN_BOX color 78
+        }
+        Fl_Value_Input InsertAlarmSeverity {
+          label {Gravita:}
+          xywh {482 126 64 30} box GTK_DOWN_BOX
+        }
+      }
+      Fl_Group InsertProcedure {
+        label {Dichiarazione procedura} open
+        xywh {20 322 950 386} box GTK_UP_BOX labelsize 15 align 17
+      } {
+        Fl_Input procedureName {
+          label {Nome procedura}
+          xywh {48 364 250 31} box GTK_DOWN_BOX align 5
+        }
+        Fl_Button addStepProcedure {
+          label Aggiungi
+          callback OnAddStepProcedure
+          xywh {860 667 100 30} box GTK_UP_BOX down_box GTK_DOWN_BOX color 78
+        }
+        Fl_Button FindProcedure {
+          label Cerca
+          callback OnFindProcedure
+          xywh {309 365 100 30} box GTK_UP_BOX down_box GTK_DOWN_BOX color 95
+        }
+        Fl_Button ProcedureUpdate {
+          label Aggiorna
+          callback OnProcedureUpdate
+          xywh {860 457 100 30} box GTK_UP_BOX down_box GTK_DOWN_BOX color 239
+        }
+        Fl_Value_Output procedureID {
+          label {ID:}
+          xywh {48 411 64 22} box GTK_DOWN_BOX align 5
+        }
+        Fl_Box ProceduraPassi {
+          label {Passi procedura}
+          xywh {385 421 220 36} labelsize 15
+        }
+        Fl_Table tableStepProcedure {open
+          xywh {34 457 810 132} box GTK_DOWN_FRAME
+          code0 {\#include "UiTable.h"}
+          class ProcedureTable
+        } {}
+        Fl_Input InsertProcedureTitle {
+          label {Nome procedura:}
+          xywh {34 613 250 30} box GTK_DOWN_BOX align 5
+        }
+        Fl_Input InsertProcedureInstruction {
+          label {Istruzione:}
+          xywh {34 663 600 30} box GTK_DOWN_BOX align 5
+        }
+        Fl_Check_Button InsertProcedureEscalation {
+          label Escalation
+          xywh {509 613 98 26} down_box DOWN_BOX labelsize 15
+        }
+        Fl_Choice InsertEscalationRole {
+          label {Escalation role} open selected
+          xywh {683 613 162 30} box GTK_DOWN_BOX down_box GTK_DOWN_BOX align 5
+        } {}
+        Fl_Spinner InsertProcedurePasso {
+          label {Passo:}
+          xywh {297 613 64 30} align 5 minimum 0
+        }
+        Fl_Browser procedureListBrowser {
+          callback OnProcedureListBrowser
+          xywh {620 332 340 112}
+          class Fl_Hold_Browser
+        }
+      }
+    }
+    Fl_Group WinLinkAlarmProcedure {
+      comment {Collegamento allarmi e procedure} open
+      xywh {0 36 1018 726} hide
+    } {
+      Fl_Box {} {
+        label {Link allarmi procedure}
+        xywh {20 46 400 30} labelsize 25 align 20
+      }
+      Fl_Browser alarmBrowser {
+        label {Allarmi:}
+        xywh {64 122 266 349} box GTK_DOWN_BOX labelsize 15 align 5
+        class Fl_Hold_Browser
+      }
+      Fl_Browser procedureBrowser {
+        label {Procedure:}
+        xywh {361 122 266 349} box GTK_DOWN_BOX labelsize 15 align 5
+        class Fl_Hold_Browser
+      }
+      Fl_Button LinkProcedureUpdate {
+        label Aggiorna
+        callback OnLinkProcedureUpdate
+        xywh {659 122 100 30} box GTK_UP_BOX down_box GTK_DOWN_BOX color 239
+      }
+      Fl_Button LinkProcedureCollega {
+        label Collega
+        callback OnLinkProcedureCollega
+        xywh {659 441 100 30} box GTK_UP_BOX down_box GTK_DOWN_BOX color 71
+      }
+    }
+    Fl_Menu_Bar {} {open
+      xywh {0 0 1018 36}
+    } {
+      Submenu {} {
+        label File open
+        xywh {0 0 100 20}
+      } {
+        MenuItem {} {
+          label {Assistente diagnostica}
+          callback OnAssistenteDiagnostica
+          xywh {0 0 100 20}
+        }
+        MenuItem {} {
+          label {Inserimento dati}
+          callback OnInserimentoDati
+          xywh {10 10 100 20}
+        }
+      }
+      Submenu {} {
+        label Modifica open
+        xywh {0 0 100 20}
+      } {
+        MenuItem LinkAlarmProcedure {
+          label {Link allarmi procedure}
+          callback OnLinkAlarmProcedure
+          xywh {0 0 100 20}
+        }
+      }
+    }
+  }
+}

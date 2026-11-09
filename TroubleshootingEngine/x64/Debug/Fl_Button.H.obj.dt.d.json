@@ -1,0 +1,40 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ab_project\\ablib\\fltk-1.4.2_vs2022_x64\\fltk-1.4.2_vs2022_x64\\fl\\fl_button.h",
+        "ProvidedModule": "",
+        "Includes": [
+            "c:\\ab_project\\ablib\\fltk-1.4.2_vs2022_x64\\fltk-1.4.2_vs2022_x64\\fl\\fl_widget.h",
+            "c:\\ab_project\\ablib\\fltk-1.4.2_vs2022_x64\\fltk-1.4.2_vs2022_x64\\fl\\fl.h",
+            "c:\\ab_project\\ablib\\fltk-1.4.2_vs2022_x64\\fltk-1.4.2_vs2022_x64\\fl\\fl_config.h",
+            "c:\\ab_project\\ablib\\fltk-1.4.2_vs2022_x64\\fltk-1.4.2_vs2022_x64\\fl\\fl_export.h",
+            "c:\\ab_project\\ablib\\fltk-1.4.2_vs2022_x64\\fltk-1.4.2_vs2022_x64\\fl\\platform_types.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.28000.0\\ucrt\\time.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.28000.0\\ucrt\\corecrt.h",
+            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.44.35207\\include\\vcruntime.h",
+            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.44.35207\\include\\sal.h",
+            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.44.35207\\include\\concurrencysal.h",
+            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.44.35207\\include\\vadefs.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.28000.0\\ucrt\\corecrt_wtime.h",
+            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.44.35207\\include\\stdint.h",
+            "c:\\ab_project\\ablib\\fltk-1.4.2_vs2022_x64\\fltk-1.4.2_vs2022_x64\\fl\\fl_casts.h",
+            "c:\\ab_project\\ablib\\fltk-1.4.2_vs2022_x64\\fltk-1.4.2_vs2022_x64\\fl\\fl_utf8.h",
+            "c:\\ab_project\\ablib\\fltk-1.4.2_vs2022_x64\\fltk-1.4.2_vs2022_x64\\fl\\fl_types.h",
+            "c:\\ab_project\\ablib\\fltk-1.4.2_vs2022_x64\\fltk-1.4.2_vs2022_x64\\fl\\fl_attr.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.28000.0\\ucrt\\stdio.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.28000.0\\ucrt\\corecrt_wstdio.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.28000.0\\ucrt\\corecrt_stdio_config.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.28000.0\\ucrt\\sys\\stat.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.28000.0\\ucrt\\sys\\types.h",
+            "c:\\ab_project\\ablib\\fltk-1.4.2_vs2022_x64\\fltk-1.4.2_vs2022_x64\\fl\\enumerations.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.28000.0\\ucrt\\string.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.28000.0\\ucrt\\corecrt_memory.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.28000.0\\ucrt\\corecrt_memcpy_s.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.28000.0\\ucrt\\errno.h",
+            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.44.35207\\include\\vcruntime_string.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.28000.0\\ucrt\\corecrt_wstring.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

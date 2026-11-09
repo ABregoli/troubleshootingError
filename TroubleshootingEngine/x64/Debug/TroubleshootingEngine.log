@@ -1,0 +1,17 @@
+﻿  Main.cpp
+E:\AB_Project\Ai\AI_ENGINE\V1.0\V1.0\SW\TroubleshootingEngine\TroubleshootingEngine\Ui.c(211,15): warning C4244: 'inizializzazione': conversione da 'double' a 'int'. Possibile perdita di dati.
+  (compilazione del file di origine 'Main.cpp')
+  
+E:\AB_Project\Ai\AI_ENGINE\V1.0\V1.0\SW\TroubleshootingEngine\TroubleshootingEngine\Ui.c(310,21): warning C4244: 'inizializzazione': conversione da 'double' a 'int'. Possibile perdita di dati.
+  (compilazione del file di origine 'Main.cpp')
+  
+E:\AB_Project\Ai\AI_ENGINE\V1.0\V1.0\SW\TroubleshootingEngine\TroubleshootingEngine\Ui.c(330,19): warning C4244: 'inizializzazione': conversione da 'double' a 'int'. Possibile perdita di dati.
+  (compilazione del file di origine 'Main.cpp')
+  
+E:\AB_Project\Ai\AI_ENGINE\V1.0\V1.0\SW\TroubleshootingEngine\TroubleshootingEngine\Ui.c(350,73): warning C4244: 'argomento': conversione da 'double' a 'int'. Possibile perdita di dati.
+  (compilazione del file di origine 'Main.cpp')
+  
+E:\AB_Project\Ai\AI_ENGINE\V1.0\V1.0\SW\TroubleshootingEngine\TroubleshootingEngine\Ui.c(398,10): warning C4101: 'sep': variabile locale senza riferimenti
+  (compilazione del file di origine 'Main.cpp')
+  
+  TroubleshootingEngine.vcxproj -> E:\AB_Project\Ai\AI_ENGINE\V1.0\V1.0\SW\TroubleshootingEngine\x64\Debug\TroubleshootingEngine.exe
